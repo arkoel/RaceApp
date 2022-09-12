@@ -1,0 +1,12 @@
+C:\Users\arjen\source\repos\Raceapp\Controller\bin\Debug\net6.0\Controller.deps.json
+C:\Users\arjen\source\repos\Raceapp\Controller\bin\Debug\net6.0\Controller.dll
+C:\Users\arjen\source\repos\Raceapp\Controller\bin\Debug\net6.0\Controller.pdb
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.csproj.AssemblyReference.cache
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.AssemblyInfoInputs.cache
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.AssemblyInfo.cs
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.csproj.CoreCompileInputs.cache
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.dll
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\refint\Controller.dll
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\Controller.pdb
+C:\Users\arjen\source\repos\Raceapp\Controller\obj\Debug\net6.0\ref\Controller.dll

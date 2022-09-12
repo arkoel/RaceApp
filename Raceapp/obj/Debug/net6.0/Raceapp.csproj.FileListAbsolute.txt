@@ -1,0 +1,15 @@
+C:\Users\arjen\source\repos\Raceapp\Raceapp\bin\Debug\net6.0\Raceapp.exe
+C:\Users\arjen\source\repos\Raceapp\Raceapp\bin\Debug\net6.0\Raceapp.deps.json
+C:\Users\arjen\source\repos\Raceapp\Raceapp\bin\Debug\net6.0\Raceapp.runtimeconfig.json
+C:\Users\arjen\source\repos\Raceapp\Raceapp\bin\Debug\net6.0\Raceapp.dll
+C:\Users\arjen\source\repos\Raceapp\Raceapp\bin\Debug\net6.0\Raceapp.pdb
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.csproj.AssemblyReference.cache
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.AssemblyInfoInputs.cache
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.AssemblyInfo.cs
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.csproj.CoreCompileInputs.cache
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.dll
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\refint\Raceapp.dll
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.pdb
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\Raceapp.genruntimeconfig.cache
+C:\Users\arjen\source\repos\Raceapp\Raceapp\obj\Debug\net6.0\ref\Raceapp.dll
