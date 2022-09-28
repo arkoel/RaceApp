@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i5HQdVh0ULq6FM9Ev54zDgTW4jQdnkxkjOtd5mFSSB9t6QG0WQakFA+tJbtTWyDBkb34SMAJf3pU1XzSjAIOXQ==",
+  "dgSpecHash": "USyDdie2Zc1SmR5f5yifKhCn+AB7D8xrP0CUxTPXQQw4oqUCMsDrrK8u/k9yid5cGUjwIPKauOKdZEiLghPiRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arjen\\source\\repos\\Raceapp\\Controller\\Controller.csproj",
+  "projectFilePath": "C:\\Users\\arjen\\source\\repos\\arkoel\\RaceApp\\Controller\\Controller.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

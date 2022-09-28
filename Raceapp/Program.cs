@@ -1,16 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
-Int32 nummer = 255;
-int n = 2;
-System.Boolean ans = true;
-bool a = true;
-System.String s;
+﻿using Controller;
+using Model;
+using System;
 
-Console.Write("Geef een planeet op: ");
-string woord = "Hallo, wereld";
-string? planet = Console.ReadLine();
-Console.WriteLine($"de planeet die jij heb ingetypt is: {planet}!");
-for (int i = 0; i < 100; i++)
+namespace Raceapp // Note: actual namespace depends on the project name.
 {
-    Console.WriteLine(i);
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Data.Initialize(new Competition());
+            Data.NextRace();
+            Race race = new Race(Data.CurrentRace, Data._competition.participants);
+            
+            Visualisatie.Initialize();
+            Visualisatie.DrawTrack(Data.CurrentRace);
+            for (; ; )
+            {
+                Thread.Sleep(3);
+            }
+
+
+            //Data.NextRace();
+            //Visualisatie.Initialize();
+            //Visualisatie.DrawTrack(Data.CurrentRace);
+        }
+    }
 }
-Console.ReadLine();
