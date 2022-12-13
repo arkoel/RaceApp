@@ -8,25 +8,27 @@ namespace Model
 {
     public class SectionData
     {
-        public IParticipant Left;
-        public int DistanceLeft;
-        public IParticipant Right;
-        public int DistanceRight;
-        public SectionData(IParticipant Left, int DistanceLeft, IParticipant Right,int DictanceRight)
+        public IParticipant Left    { get; set; }
+        public int DistanceLeft     { get; set; }
+        public IParticipant Right   { get; set; }
+        public int DistanceRight    { get; set; }
+        public SectionData(IParticipant left, int distanceLeft, IParticipant right,int dictanceRight)
         {
-            this.Left = Left;
-            this.DistanceLeft = DistanceLeft;
-            this.Right = Right;
-            this.DistanceRight = DictanceRight;
+            this.Left = left;
+            this.DistanceLeft = distanceLeft;
+            this.Right = right;
+            this.DistanceRight = dictanceRight;
         }
 
-
-        public interface IParticipant //: IEquipment    
+        public interface IParticipant    
         {
-            public string Name { get; set; }
-            public string Points { get; set; }
+            public string Name  { get; set; }
+            public int Points   { get; set; }
+            public int RacesWon { get; set; }
             public IEquipment Equipment { get; set; }
+            public TeamColors Teamcolor { get; set; }
 
+            
             enum TeamColors
             {
                 Red,
@@ -37,4 +39,4 @@ namespace Model
             }
         }
     }
-    }
+}

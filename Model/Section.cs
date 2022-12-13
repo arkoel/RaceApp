@@ -13,15 +13,14 @@ namespace Model
         {
             SectionType = sectiontype;
         }
-
     }
-        public enum SectionTypes
-        {
-            Straight,
-            LeftCorner,
-            RightCorner,
-            Finish,
-            StartGrid
-        }
-    
+    public enum SectionTypes
+    {
+        Straight,
+        LeftCorner,
+        RightCorner,
+        Finish,
+        StartGrid
+    }
+
 }

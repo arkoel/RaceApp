@@ -8,18 +8,16 @@ namespace Model
 {
     public class Track
     {
-        public string Name;
-        public LinkedList<Section> Sections;
-        public Track(string Name, SectionTypes[] sections)
+        public string Name { get; set; }
+        public LinkedList<Section> Sections { get; set; }
+        public Track(string name, SectionTypes[] sections)
         {
-            this.Name = Name;
-
+            this.Name = name;
             this.Sections = new LinkedList<Section>();
             foreach (var item in sections)
             {
                 this.Sections.AddLast(new Section(item));
             }
-
         }
     }
 }

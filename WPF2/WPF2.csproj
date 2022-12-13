@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Graphics\Car_Blue.png" />
+    <None Remove="Graphics\Car_Blue_Broken.png" />
+    <None Remove="Graphics\Car_Gray.png" />
+    <None Remove="Graphics\Car_Gray_Broken.png" />
+    <None Remove="Graphics\Car_Green.png" />
+    <None Remove="Graphics\Car_Green_Broken.png" />
+    <None Remove="Graphics\Car_Red.png" />
+    <None Remove="Graphics\Car_Red_Broken.png" />
+    <None Remove="Graphics\Car_Yellow.png" />
+    <None Remove="Graphics\Car_Yellow_Broken.png" />
+    <None Remove="Graphics\FinishHorisontal.png" />
+    <None Remove="Graphics\StartHorizontal.png" />
+    <None Remove="Graphics\StraightHorisontal.png" />
+    <None Remove="Graphics\StraightVertical.png" />
+    <None Remove="Graphics\Turn_0.png" />
+    <None Remove="Graphics\Turn_1.png" />
+    <None Remove="Graphics\Turn_2.png" />
+    <None Remove="Graphics\Turn_3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Graphics\Car_Blue.png" />
+    <Content Include="Graphics\Car_Blue_Broken.png" />
+    <Content Include="Graphics\Car_Gray.png" />
+    <Content Include="Graphics\Car_Gray_Broken.png" />
+    <Content Include="Graphics\Car_Green.png" />
+    <Content Include="Graphics\Car_Green_Broken.png" />
+    <Content Include="Graphics\Car_Red.png" />
+    <Content Include="Graphics\Car_Red_Broken.png" />
+    <Content Include="Graphics\Car_Yellow.png" />
+    <Content Include="Graphics\Car_Yellow_Broken.png" />
+    <Content Include="Graphics\FinishHorisontal.png" />
+    <Content Include="Graphics\StartHorizontal.png" />
+    <Content Include="Graphics\StraightHorisontal.png" />
+    <Content Include="Graphics\StraightVertical.png" />
+    <Content Include="Graphics\Turn_0.png" />
+    <Content Include="Graphics\Turn_1.png" />
+    <Content Include="Graphics\Turn_2.png" />
+    <Content Include="Graphics\Turn_3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
+  </ItemGroup>
+
+</Project>

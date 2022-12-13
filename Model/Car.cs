@@ -7,21 +7,24 @@ namespace Model
 {
     public class Car : IEquipment
     {
+        public int Quality { get;  set; }
+        public int Performance { get;  set; }
+        public int Speed { get; set;  } 
+        public bool IsBroken { get; set;  }
 
-        private int _Quality;
-        private int _Performance;
-        private int _Speed;
-        private bool _IsBroken;
-        int IEquipment.Quality { get { return _Quality; } set { _Quality = value; } }
-        int IEquipment.Performance { get { return _Performance; } set { _Performance = value; } }
-        int IEquipment.Speed { get { return _Speed; } set { _Speed = value; } } 
-        bool IEquipment.IsBroken { get { return _IsBroken; } set { _IsBroken = value; } }
-        public Car(int Quality, int Performance, int Speed, bool IsBroken)
+        /// <summary>
+        /// performance * speed * Quality = actual speed
+        /// </summary>
+        /// <param name="quality"></param>
+        /// <param name="performance"></param>
+        /// <param name="speed"></param>
+        /// <param name="isBroken"></param>
+        public Car(int quality, int performance, int speed, bool isBroken)
         {
-            this._Quality = Quality;
-            this._Performance = Performance;
-            this._Speed = Speed;
-            this._IsBroken = IsBroken;
+            Quality = quality;
+            Performance = performance;
+            Speed = speed;
+            IsBroken = isBroken;
         }
     }
 }

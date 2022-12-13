@@ -1,44 +1,64 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Runtime.CompilerServices;
+using System.Timers;
 using Model;
 
 namespace Controller
 {
+    public delegate void NexttrackEvent();
+
     public static class Data
     {
-        public static Competition _competition { get; set; }
-        public static Track CurrentRace;
-        public static void Initialize(Competition compitition)
+        public static Competition Competition { get; set; }
+        public static Race CurrentRace { get; set; }
+        public static NexttrackEvent NexttrackEvent { get; set; }
+        public static bool UsingWPF { get; set; }
+
+
+        public static void Initialize(bool UsingWPF)
         {
-            _competition = compitition;
-            AddParticipants();
-            AddTracks();
+            Data.UsingWPF = UsingWPF;
+            List<SectionData.IParticipant> participants = new List<SectionData.IParticipant>();
+            AddParticipants(participants);
+            Queue<Track> tracks = new Queue<Track>();
+            AddTracks(tracks);
+            Competition = new Competition(tracks, participants);
         }
 
+        /// <summary>
+        /// Runs Next Race in compitition
+        /// </summary>
         public static void NextRace()
         {
-            Track _track = _competition.NextTrack();
-            if(_track != null) 
+            Track Track = Competition.NextTrack();
+            if(Track != null) 
             {
-                CurrentRace = _track;
+                CurrentRace = new Race(Track,Competition.Participants);
+                NexttrackEvent?.Invoke();
             }
         }
 
-        public static void AddParticipants()
+        /// <summary>
+        /// Adds participants to List
+        /// </summary>
+        /// <param name="participants"></param>
+        public static void AddParticipants(List<SectionData.IParticipant> participants)
         {
-            _competition.participants.Add(new Driver("henk", SectionData.IParticipant.TeamColors.Red, new Car(100, 1, 0, false)));
-            _competition.participants.Add(new Driver("Piet", SectionData.IParticipant.TeamColors.Blue, new Car(100, 1, 0, false)));
-            _competition.participants.Add(new Driver("Jan", SectionData.IParticipant.TeamColors.Green, new Car(100, 1, 0, false)));
-           
+            participants.Add(new Driver("henk", SectionData.IParticipant.TeamColors.Red, new Car(0, 0, 0, false)));
+            participants.Add(new Driver("Piet", SectionData.IParticipant.TeamColors.Blue, new Car(0, 0, 0, false)));
+            participants.Add(new Driver("Jan de Snelle", SectionData.IParticipant.TeamColors.Green, new Car(0, 0, 0, false)));
+            //participants.Add(new Driver("Jan", SectionData.IParticipant.TeamColors.Green, new Car(100, 2, 10, false)));
         }
-        public static void AddTracks()
+
+        /// <summary>
+        /// Adds Tracks to List 
+        /// </summary>
+        /// <param name="tracks"></param>
+        public static void AddTracks(Queue<Track> tracks)
         {
-            _competition.Tracks.Enqueue(new Track("Track 1", new SectionTypes[] { SectionTypes.RightCorner, SectionTypes.Finish, SectionTypes.StartGrid, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.Straight, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.Straight })); ;
-            _competition.Tracks.Enqueue(new Track("Track 2", new SectionTypes[] { SectionTypes.RightCorner, SectionTypes.StartGrid, SectionTypes.RightCorner, SectionTypes.LeftCorner, SectionTypes.RightCorner, SectionTypes.LeftCorner, SectionTypes.RightCorner, SectionTypes.Finish}));
-            _competition.Tracks.Enqueue(new Track("Track 3", new SectionTypes[] { SectionTypes.StartGrid, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.Straight, SectionTypes.Finish }));
+            tracks.Enqueue(new Track("Track 1", new SectionTypes[] { SectionTypes.StartGrid,SectionTypes.Finish, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.Straight, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.RightCorner})); ;
+            tracks.Enqueue(new Track("Track 2", new SectionTypes[] { SectionTypes.StartGrid, SectionTypes.Finish, SectionTypes.RightCorner, SectionTypes.LeftCorner, SectionTypes.RightCorner,SectionTypes.RightCorner, SectionTypes.Straight,SectionTypes.RightCorner, SectionTypes.LeftCorner, SectionTypes.Straight, SectionTypes.RightCorner, SectionTypes.RightCorner }));
+            //tracks.Enqueue(new Track("Track 3", new SectionTypes[] { SectionTypes.StartGrid, SectionTypes.Finish, SectionTypes.RightCorner, SectionTypes.Straight, SectionTypes.Straight  }));
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VJG3x+x0AM1VhGLDpXfU9X8OuJQIaLTDcUBHgaySGAgjftH+j9TFnRwRl6HNH+sLjJRYxylYlBtInPCIYUBFHA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arjen\\OneDrive - Windesheim Office365\\Windesheim\\C#\\RaceApp\\WPF2\\WPF2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arjen\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\arjen\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
